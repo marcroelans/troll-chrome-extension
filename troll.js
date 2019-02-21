@@ -22,6 +22,15 @@
     ];
 
     /**
+     * operators
+     * @type {Array}
+     */
+    const op = [
+        '-',
+        '+'
+    ];
+
+    /**
      * all elements
      * @type {Array}
      */
@@ -56,8 +65,16 @@
      * @param {Node}
      */
      const setFontSize = (el) => {
-         el.style.fontSize = randomInt(1, 200).toString() + 'px';
+         el.style.fontSize = randomInt(1, 50).toString() + 'px';
      };
+
+     /**
+      * sets transform translate
+      * @param {Node}
+      */
+      const setTransform = (el) => {
+          el.style.transform = `translate(${op[randomInt(0, op.length -1)].toString()}%)`;
+      };
 
     /**
      * functions we call
@@ -79,7 +96,7 @@
             fn(el);
             console.log(randomInt(10, 50));
             run(funcs[randomInt(0, funcs.length - 1)], randomInt(10, 30));
-        }, wait * 10000);
+        }, wait * 100);
     };
 
     // init :)

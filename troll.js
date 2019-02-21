@@ -94,9 +94,9 @@
         setTimeout(function(){
             const el = elements[randomInt(0, elements.length - 1)];
             fn(el);
-            console.log(randomInt(10, 50));
+            console.log(el);
             run(funcs[randomInt(0, funcs.length - 1)], randomInt(10, 30));
-        }, wait * 100);
+        }, wait * 1000);
     };
 
     // init :)

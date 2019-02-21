@@ -52,13 +52,22 @@
     };
 
     /**
+     * sets a font size
+     * @param {Node}
+     */
+     const setFontSize = (el) => {
+         el.style.fontSize = randomInt(1, 200).toString() + 'px';
+     };
+
+    /**
      * functions we call
      * @type {Array}
      */
     const funcs = [
         setBackground,
         setColor,
-        setOpacity
+        setOpacity,
+        setFontSize
     ];
 
     /**
